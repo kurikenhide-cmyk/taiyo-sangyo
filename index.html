@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="合同会社 太陽 産業 | ケーブル盗難復旧・緊急駆けつけ調査、太陽光発電所の定期メンテナンス、リパワリング設計施工、FIT申請サポート、中古太陽光発電所買取など。岐阜県海津市を拠点に迅速対応。">
+  <meta name="robots" content="index, follow">
+  <title>合同会社 太陽 産業 | 太陽光発電・ケーブル盗難対策の専門家</title>
+  <!-- Google Fonts (無料・表示軽量化) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (無料アイコン) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f9f5;
+      color: #1e2a1e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* カラー：自然/太陽/信頼感 */
+    :root {
+      --primary: #e67e22;
+      --primary-dark: #b45f1b;
+      --secondary: #2c6e2c;
+      --accent: #f39c12;
+      --light: #fff9ef;
+      --dark: #1f2a1b;
+      --gray: #4a5b4a;
+      --border-light: #e2e8e0;
+    }
+
+    /* コンテナ */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ヘッダー */
+    header {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+      background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 16px 0;
+      gap: 16px;
+    }
+
+    .logo h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--secondary);
+    }
+
+    .logo p {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .contact-header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .tel-header {
+      background: var(--primary);
+      padding: 8px 18px;
+      border-radius: 60px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tel-header i {
+      font-size: 1.2rem;
+    }
+
+    .tel-header:hover {
+      background: var(--primary-dark);
+      transform: scale(0.98);
+    }
+
+    /* ナビ */
+    nav {
+      background: var(--secondary);
+      border-radius: 60px;
+      margin: 12px 0 8px;
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 4px;
+    }
+
+    .nav-links li a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+      border-radius: 40px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links li a:hover {
+      background: rgba(255,255,240,0.2);
+      color: #ffefc0;
+    }
+
+    /* ヒーロー */
+    .hero {
+      background: linear-gradient(105deg, #fef7e0 0%, #e8f0e5 100%);
+      border-radius: 32px;
+      margin: 32px 0;
+      padding: 48px 40px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--secondary);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 28px;
+      color: #2c3a2c;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* 事業内容セクション グリッド */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 48px 0 24px 0;
+      border-left: 6px solid var(--primary);
+      padding-left: 20px;
+      color: var(--dark);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 22px;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+      border: 1px solid var(--border-light);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+      border-color: #ffd9a5;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* 会社概要・地図 */
+    .company-wrap {
+      background: white;
+      border-radius: 32px;
+      padding: 32px 36px;
+      margin: 48px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid var(--border-light);
+    }
+
+    .company-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .info-box {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .info-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+
+    .info-detail {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .info-detail li {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+    }
+
+    .info-detail i {
+      width: 28px;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    .map {
+      flex: 1.2;
+      min-width: 260px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 260px;
+      border: 0;
+    }
+
+    /* お問い合わせ CTA */
+    .cta-section {
+      background: var(--secondary);
+      border-radius: 40px;
+      padding: 48px 36px;
+      text-align: center;
+      color: white;
+      margin: 56px 0 48px;
+    }
+
+    .cta-section h3 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: 28px;
+      opacity: 0.9;
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.2s;
+    }
+
+    .btn-light:hover {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.02);
+    }
+
+    /* フッター */
+    footer {
+      background: #1a2a1a;
+      color: #cddfcd;
+      padding: 36px 0 28px;
+      border-radius: 32px 32px 0 0;
+      margin-top: 24px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 780px) {
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        padding: 32px 24px;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .company-wrap {
+        padding: 24px;
+      }
+      .cta-section h3 {
+        font-size: 1.6rem;
+      }
+      nav {
+        width: 100%;
+        border-radius: 40px;
+        overflow-x: auto;
+      }
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-flex">
+      <div class="logo">
+        <h1>合同会社 太陽 産業</h1>
+        <p>太陽光発電・ケーブル盗難対策のプロフェッショナル</p>
+      </div>
+      <div class="contact-header">
+        <a href="tel:08070619461" class="tel-header"><i class="fas fa-phone-alt"></i> 080-7061-9461</a>
+        <a href="mailto:kuriken.hide@gmail.com" class="tel-header" style="background: #3a6b3a;"><i class="fas fa-envelope"></i> メール</a>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#services">事業内容</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- ヒーロー -->
+  <div class="hero">
+    <h2>迅速・確実な復旧工事と<br>太陽光発電所のトータルサポート</h2>
+    <p>ケーブル盗難・自然災害・緊急点検からFIT申請、中古発電所買取まで。地域密着で安心のワンストップサービス。</p>
+    <a href="tel:08070619461" class="btn-primary"><i class="fas fa-bolt"></i> 24時間受付 緊急駆けつけ</a>
+  </div>
+
+  <!-- 事業内容（10項目明示） -->
+  <div id="services">
+    <div class="section-title"><i class="fas fa-solar-panel"></i> 主な事業内容</div>
+    <div class="services-grid">
+      <!-- 1 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <h3>ケーブル盗難の復旧工事</h3>
+        <p>盗難被害に遭ったケーブル・電線の緊急復旧。現場調査から再配線、絶縁測定まで迅速に対応し、発電ロスを最小限に。</p>
+      </div>
+      <!-- 2 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-car-side"></i></div>
+        <h3>緊急時の駆けつけ調査点検</h3>
+        <p>アラーム発報や発電停止など緊急時に即時現場へ駆けつけ。原因調査、簡易復旧、正確な診断レポートを提供。</p>
+      </div>
+      <!-- 3 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-leaf"></i></div>
+        <h3>太陽光発電所の定期メンテナンス</h3>
+        <p>パネル清掃・点検・絶縁抵抗測定・機器動作確認など、発電効率を維持するための定期巡回保全プラン。</p>
+      </div>
+      <!-- 4 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>ケーブル盗難対策工事</h3>
+        <p>防犯カメラ・センサー設置、ケーブル埋設保護、盗難防止金具の施工。予防策で資産を守ります。</p>
+      </div>
+      <!-- 5 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-charging-station"></i></div>
+        <h3>リパワリングの設計施工</h3>
+        <p>老朽化したパワコンや架台の更新、モジュール交換など、発電所の出力改善・長寿命化をトータルサポート。</p>
+      </div>
+      <!-- 6 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-house-flood-water"></i></div>
+        <h3>自然災害の復旧工事</h3>
+        <p>台風・豪雨・落雷などによる太陽光設備被害の早期復旧。損害調査・保険対応連携・再建工事まで対応。</p>
+      </div>
+      <!-- 7 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+        <h3>FIT申請サポート</h3>
+        <p>設置費用報告、定期報告、変更認定申請など、FIT関連書類の作成・提出を代理サポート。煩雑な手続きを軽減。</p>
+      </div>
+      <!-- 8 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>中古太陽光発電所の買い取り</h3>
+        <p>稼働中・休止中・老朽化した発電所の買取査定。現地調査後、迅速に買取・譲渡手続きを進行します。</p>
+      </div>
+      <!-- 9 追加: 発電所診断・収益改善提案 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>発電所診断・収益改善提案</h3>
+        <p>発電データ解析、機器の劣化診断、リパワリング提案で収益性向上。FIT期間後の売電戦略もサポート。</p>
+      </div>
+      <!-- 10 追加: 用地・資産相談 中古買取に加え 売却相談 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-city"></i></div>
+        <h3>太陽光資産売却・相続相談</h3>
+        <p>発電所の売却・相続・事業承継に伴う評価・手続きをワンストップ支援。中古買取だけでなく仲介紹介も。</p>
+      </div>
+    </div>
+    <p style="margin-top: -10px; margin-bottom: 24px; font-size: 0.9rem; text-align: right; color: #4b6a3b;"><i class="fas fa-check-circle"></i> その他、各種太陽光発電所トラブルに柔軟に対応</p>
+  </div>
+
+  <!-- 会社概要＋地図 -->
+  <div id="company">
+    <div class="section-title"><i class="fas fa-building"></i> 会社概要</div>
+    <div class="company-wrap">
+      <div class="company-grid">
+        <div class="info-box">
+          <h3>合同会社 太陽 産業</h3>
+          <ul class="info-detail">
+            <li><i class="fas fa-user-tie"></i> <strong>代表社員</strong>：林 秀男</li>
+            <li><i class="fas fa-map-marker-alt"></i> <strong>所在地</strong>：〒503-0535<br>岐阜県海津市南濃町松山1634-11</li>
+            <li><i class="fas fa-mobile-alt"></i> <strong>携帯電話</strong>：<a href="tel:08070619461" style="color: var(--primary); text-decoration: none;">080-7061-9461</a></li>
+            <li><i class="fas fa-phone-slash"></i> <strong>固定電話</strong>：休止中（携帯までご連絡ください）</li>
+            <li><i class="fas fa-envelope"></i> <strong>メール</strong>：<a href="mailto:kuriken.hide@gmail.com" style="color: var(--primary);">kuriken.hide@gmail.com</a></li>
+            <li><i class="fas fa-sun"></i> <strong>事業内容</strong>：太陽光発電所の保守点検・ケーブル盗難対策・復旧工事・FIT申請代行・リパワリング・中古発電所買取 他</li>
+          </ul>
+        </div>
+        <div class="map">
+          <!-- Google Maps 埋め込み (岐阜県海津市南濃町松山 周辺) 正確な住所を表示 -->
+          <iframe 
+            src="https://maps.google.com/maps?q=岐阜県海津市南濃町松山1634-11&output=embed&z=15&hl=ja"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div style="background:#f2f2f2; padding: 6px; font-size: 12px; text-align: center;">〒503-0535 岐阜県海津市南濃町松山1634-11</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- お問い合わせ/緊急連絡CTA -->
+  <div id="contact" class="cta-section">
+    <h3><i class="fas fa-exclamation-triangle"></i> 緊急のケーブル盗難・発電所トラブルは即ご連絡を</h3>
+    <p>24時間受付 / 現地調査から復旧工事まで迅速に対応。まずはお気軽にご相談ください。</p>
+    <a href="tel:08070619461" class="btn-light"><i class="fas fa-phone"></i> 080-7061-9461</a>
+    <a href="mailto:kuriken.hide@gmail.com" class="btn-light" style="margin-left: 16px; background:#ffecd6; color:#b45f1b;"><i class="fas fa-paper-plane"></i> メール問い合わせ</a>
+    <p style="margin-top: 28px; font-size: 0.9rem;">※ 固定電話は休止しております。携帯電話までご連絡ください。</p>
+  </div>
+
+  <!-- 実績や安心ポイントの追加（任意） -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; margin: 20px 0 30px;">
+    <div style="display: flex; align-items: center; gap: 12px; background: #fff; padding: 12px 20px; border-radius: 48px; box-shadow:0 1px 4px rgba(0,0,0,0.05);"><i class="fas fa-clock" style="color: var(--primary); font-size: 1.6rem;"></i> <span>迅速な駆けつけ体制</span></div>
+    <div style="display: flex; align-items: center; gap: 12px; background: #fff; padding: 12px 20px; border-radius: 48px;"><i class="fas fa-file-alt" style="color: var(--primary); font-size: 1.6rem;"></i> <span>FIT申請・変更認定 実績多数</span></div>
+    <div style="display: flex; align-items: center; gap: 12px; background: #fff; padding: 12px 20px; border-radius: 48px;"><i class="fas fa-handshake" style="color: var(--primary); font-size: 1.6rem;"></i> <span>中古発電所買取 現地査定無料</span></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-flex">
+      <div>
+        <strong>合同会社 太陽 産業</strong><br>
+        代表社員 林 秀男<br>
+        〒503-0535 岐阜県海津市南濃町松山1634-11
+      </div>
+      <div>
+        <i class="fas fa-phone-alt"></i> 080-7061-9461（携帯）<br>
+        <i class="fas fa-envelope"></i> kuriken.hide@gmail.com<br>
+        <i class="fas fa-globe"></i> 対応エリア：東海・北陸・全国対応可
+      </div>
+      <div class="copyright">
+        © 2025 合同会社 太陽 産業<br>All Rights Reserved.
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 24px; font-size: 0.7rem; border-top: 1px solid #3a553a; padding-top: 18px;">
+      ケーブル盗難復旧・緊急点検・定期メンテナンス・リパワリング・自然災害復旧・FIT手続き・中古発電所買取はお任せください。
+    </div>
+  </div>
+</footer>
+</body>
+</html>
